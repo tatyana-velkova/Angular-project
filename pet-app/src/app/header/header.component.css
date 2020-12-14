@@ -1,0 +1,20 @@
+div {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+li {
+    list-style: none;
+    color: royalblue;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+    background: #E5E5E5;
+    padding: 10px;
+}

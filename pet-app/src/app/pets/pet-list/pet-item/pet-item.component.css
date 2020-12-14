@@ -1,0 +1,10 @@
+img {
+    max-width: 300px;
+}
+
+.wrapper {
+    border: 2px solid blue;
+    margin: 10px;
+    padding: 5px;
+    max-width: 300px;
+}

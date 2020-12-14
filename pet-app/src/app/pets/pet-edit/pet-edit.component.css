@@ -1,0 +1,65 @@
+.form-wrapper {
+    border: 2px solid blue;
+    margin-top: 10px;
+    padding: 10px;
+    max-width: 100%;
+    color: blue;
+}
+
+input,
+textarea {
+    margin: 5px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+.description {
+    display: flex;
+}
+
+.location label {
+    margin-right: 25px;
+}
+
+.breed label {
+    margin-right: 43px;
+}
+
+.age label {
+    margin-right: 55px;
+}
+
+.image-path label {
+    margin-right: 17px;
+}
+
+.btn-save,
+.btn-cancel {
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.btn-save {
+    background: green;
+    margin-right: 10px;
+}
+
+.btn-cancel {
+    background: blue;
+}
+
+img {
+    max-width: 200px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
