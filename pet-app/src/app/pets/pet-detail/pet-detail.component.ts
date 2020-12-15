@@ -28,4 +28,9 @@ export class PetDetailComponent implements OnInit {
     this.router.navigate(['edit'], {relativeTo: this.route});
   }
 
+  deletePet(){
+    this.petService.deletePet(this.id);
+    this.router.navigate(['/pets']);
+  }
+
 }

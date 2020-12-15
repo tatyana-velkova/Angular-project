@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { RouterModule } from '@angular/router';
 import { PetService } from './pets/pet.service';
 import { PetInitialComponent } from './pets/pet-initial/pet-initial.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataStorageService } from './data-storage.service';
+import { PetResolverService} from './pets/pet-resolver.service';
 
 @NgModule({
   declarations: [
@@ -25,16 +28,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PetEditComponent,
     BlogComponent,
     PetItemComponent,
-    PetInitialComponent
+    PetInitialComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [PetService],
+  providers: [PetService, DataStorageService, PetResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

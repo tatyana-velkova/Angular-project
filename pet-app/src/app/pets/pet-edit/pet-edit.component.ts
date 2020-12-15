@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormControl, FormGroup, NgForm, Validators} from '@angular/forms';
 import { Pet } from '../pet.model';
 import { PetService } from '../pet.service';
@@ -14,7 +14,8 @@ export class PetEditComponent implements OnInit {
   editMode = false;
   petForm: FormGroup;
 
-  constructor(private route: ActivatedRoute, private petService: PetService) { }
+  constructor(private route: ActivatedRoute, private petService: PetService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -36,6 +37,8 @@ export class PetEditComponent implements OnInit {
     }else {
       this.petService.addPet(newPet);
     }
+
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 
 
@@ -69,6 +72,11 @@ export class PetEditComponent implements OnInit {
       'phoneNumber': new FormControl(petOwnerNumber, Validators.required),
       'imagePath': new FormControl(petImagePath, Validators.required)
     });
+  }
+
+
+  cancel(){
+    this.router.navigate(['../'], {relativeTo: this.route});
   }
 
 }

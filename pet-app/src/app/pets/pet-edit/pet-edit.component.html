@@ -1,7 +1,7 @@
 <div class="form-wrapper">
     <form [formGroup]="petForm" (ngSubmit)="submit()">
         <button class="btn-save" type="submit" [disabled]="!petForm.valid">Save</button>
-        <button class="btn-cancel" type="button">Cancel</button>
+        <button class="btn-cancel" type="button" (click)="cancel()">Cancel</button>
         <div class="location">
             <label for="location">Location:</label>
             <input type="text" name="location" id="location" formControlName="location">
@@ -24,10 +24,10 @@
         </div>
         <div class="image-path">
             <label for="imagePath">ImageURL:</label>
-            <input type="text" name="imagePath" id="imagePath" formControlName="imagePath">
+            <input type="text" name="imagePath" id="imagePath" formControlName="imagePath" #imagePath>
         </div>
-        <div>
-            <img src="" alt="">
+        <div class="img-wrapper">
+            <img [src]="imagePath.value">
         </div>
 
     </form>

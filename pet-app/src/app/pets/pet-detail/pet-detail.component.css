@@ -11,13 +11,23 @@ img {
     color: #551A8B;
 }
 
-.edit-btn {
-    background: purple;
-    color: white;
+.edit-btn,
+.delete-btn {
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 7px;
     font-size: large;
     border: none;
     cursor: pointer;
+}
+
+.edit-btn {
+    background: orange;
+    color: white;
+    margin-right: 10px;
+}
+
+.delete-btn {
+    background: red;
+    color: white;
 }
