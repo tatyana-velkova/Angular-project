@@ -1,22 +1,25 @@
 <div>
     <nav>
         <ul>
-            <li>
+            <li *ngIf="isAuthenticated">
                 <a routerLink="/pets">Pets</a>
             </li>
-            <li>
+            <li *ngIf="isAuthenticated">
                 <a routerLink="/blog">Blog</a>
             </li>
-            <li>
+            <li *ngIf="isAuthenticated">
                 <a>Shop</a>
             </li>
-            <li>
-                <a>Authenticate</a>
+            <li *ngIf="!isAuthenticated">
+                <a routerLink="/auth">Authenticate</a>
             </li>
-            <li>
+            <li *ngIf="isAuthenticated">
+                <a>Logout</a>
+            </li>
+            <li *ngIf="isAuthenticated">
                 <a (click)="saveData()">Save Data</a>
             </li>
-            <li>
+            <li *ngIf="isAuthenticated">
                 <a (click)="fetchData()">Fetch Data</a>
             </li>
         </ul>

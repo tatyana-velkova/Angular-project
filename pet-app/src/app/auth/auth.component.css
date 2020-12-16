@@ -1,0 +1,67 @@
+.wrapper {
+    max-width: 50%;
+    margin: 50px;
+    padding: 30px;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    background: lightgray;
+    text-transform: uppercase;
+}
+
+.buttons {
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+}
+
+.signup,
+.switch {
+    padding: 10px;
+    border: none;
+    color: white;
+    background: blue;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.signup {
+    margin-right: 10px;
+}
+
+label {
+    margin-right: 20px;
+    font-weight: bold;
+    color: darkslategrey;
+}
+
+input {
+    min-width: 80%;
+    padding-bottom: 10px;
+}
+
+.email {
+    margin-bottom: 10px;
+}
+
+.email label {
+    margin-right: 50px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}

@@ -17,6 +17,8 @@ import { PetInitialComponent } from './pets/pet-initial/pet-initial.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataStorageService } from './data-storage.service';
 import { PetResolverService} from './pets/pet-resolver.service';
+import { AuthComponent } from './auth/auth.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { PetResolverService} from './pets/pet-resolver.service';
     BlogComponent,
     PetItemComponent,
     PetInitialComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { PetResolverService} from './pets/pet-resolver.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [PetService, DataStorageService, PetResolverService],
+  providers: [PetService, DataStorageService, PetResolverService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

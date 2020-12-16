@@ -6,6 +6,7 @@ import { PetEditComponent } from './pets/pet-edit/pet-edit.component';
 import { PetInitialComponent } from './pets/pet-initial/pet-initial.component';
 import { PetsComponent } from './pets/pets.component';
 import { PetResolverService} from './pets/pet-resolver.service';
+import { AuthComponent } from './auth/auth.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/pets', pathMatch: 'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
     {path: ':id', component: PetDetailComponent},
     {path: ':id/edit', component: PetEditComponent}
   ]},
-  {path: 'blog', component: BlogComponent}
+  {path: 'blog', component: BlogComponent},
+  {path: 'auth', component: AuthComponent}
 ];
 
 @NgModule({
