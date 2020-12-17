@@ -1,6 +1,5 @@
 div {
     font-family: Helvetica, sans-serif;
-    font-weight: bold;
     font-size: larger;
 }
 
@@ -9,12 +8,29 @@ li {
     color: royalblue;
 }
 
-ul {
+.ul-wrapper {
     display: flex;
     justify-content: space-around;
 }
 
 nav {
-    background: #E5E5E5;
+    background: lightgrey;
     padding: 10px;
+}
+
+.save-data,
+.fetch-data,
+.logout {
+    cursor: pointer;
+}
+
+.pets-btns,
+.blog-btns {
+    display: flex;
+    margin-left: -120px;
+    margin-top: 10px;
+}
+
+.save-data {
+    margin-right: 10px;
 }

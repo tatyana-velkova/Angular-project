@@ -1,0 +1,9 @@
+.wrapper {
+    display: flex;
+    background: #E5E5E5
+}
+
+.list {
+    margin-right: 100px;
+    min-width: 30%;
+}

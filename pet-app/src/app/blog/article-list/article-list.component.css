@@ -1,0 +1,14 @@
+.wrapper {
+    max-width: 100%;
+}
+
+.add-article {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}

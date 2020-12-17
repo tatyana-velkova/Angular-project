@@ -1,12 +1,42 @@
 <div>
     <nav>
-        <ul>
-            <li *ngIf="isAuthenticated">
-                <a routerLink="/pets">Pets</a>
+        <ul class="ul-wrapper">
+            <li>
+                <ul class="pets-wrapper">
+                    <li *ngIf="isAuthenticated">
+                        <a routerLink="/pets">Pets</a>
+                    </li>
+                    <li>
+                        <ul class="pets-btns">
+                            <li *ngIf="isAuthenticated">
+                                <a class="save-data" (click)="saveData()">Save Pets</a>
+                            </li>
+                            <li *ngIf="isAuthenticated">
+                                <a class="fetch-data" (click)="fetchData()">Fetch Pets</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
-            <li *ngIf="isAuthenticated">
-                <a routerLink="/blog">Blog</a>
+
+            <li>
+                <ul class="blog-wrapper">
+                    <li *ngIf="isAuthenticated">
+                        <a routerLink="/blog">Blog</a>
+                    </li>
+                    <li>
+                        <ul class="blog-btns">
+                            <li *ngIf="isAuthenticated">
+                                <a class="save-data" (click)="saveArticles()">Save Articles</a>
+                            </li>
+                            <li *ngIf="isAuthenticated">
+                                <a class="fetch-data" (click)="fetchArticles()">Fetch Articles</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </li>
+
             <li *ngIf="isAuthenticated">
                 <a>Shop</a>
             </li>
@@ -14,14 +44,9 @@
                 <a routerLink="/auth">Authenticate</a>
             </li>
             <li *ngIf="isAuthenticated">
-                <a>Logout</a>
+                <a class="logout" (click)="logout()">Logout</a>
             </li>
-            <li *ngIf="isAuthenticated">
-                <a (click)="saveData()">Save Data</a>
-            </li>
-            <li *ngIf="isAuthenticated">
-                <a (click)="fetchData()">Fetch Data</a>
-            </li>
+
         </ul>
     </nav>
 </div>

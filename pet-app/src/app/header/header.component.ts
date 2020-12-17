@@ -25,11 +25,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   saveData(){
-    this.dataStorageService.storePets();
+    this.dataStorageService.storePets().subscribe();
   }
 
   fetchData(){
     this.dataStorageService.fetchPets().subscribe();
+  }
+
+
+  logout(){
+    this.authService.logout();
+  }
+
+
+  saveArticles(){
+    this.dataStorageService.storeArticles().subscribe();
+  }
+
+  fetchArticles(){
+    this.dataStorageService.fetchArticles().subscribe();
   }
 
 }

@@ -19,6 +19,12 @@ import { DataStorageService } from './data-storage.service';
 import { PetResolverService} from './pets/pet-resolver.service';
 import { AuthComponent } from './auth/auth.component';
 import { AuthService } from './auth/auth.service';
+import { ArticleListComponent } from './blog/article-list/article-list.component';
+import { ArticleItemComponent } from './blog/article-list/article-item/article-item.component';
+import { ArticleDetailComponent } from './blog/article-detail/article-detail.component';
+import { ArticleEditComponent } from './blog/article-edit/article-edit.component';
+import { ArticleService } from './blog/article.service';
+import { ShortenPipe } from './shorten.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,12 @@ import { AuthService } from './auth/auth.service';
     BlogComponent,
     PetItemComponent,
     PetInitialComponent,
-    AuthComponent
+    AuthComponent,
+    ArticleListComponent,
+    ArticleItemComponent,
+    ArticleDetailComponent,
+    ArticleEditComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,
@@ -41,7 +52,7 @@ import { AuthService } from './auth/auth.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [PetService, DataStorageService, PetResolverService, AuthService],
+  providers: [PetService, DataStorageService, PetResolverService, AuthService, ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

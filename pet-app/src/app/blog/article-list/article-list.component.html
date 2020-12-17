@@ -1,0 +1,7 @@
+<div class="wrapper">
+    <app-article-item *ngFor="let articleEl of articles; let i = index;" [article]="articleEl" [index]="i"></app-article-item>
+
+</div>
+<div>
+    <button class="add-article" (click)="addArticle()">Add Article</button>
+</div>
