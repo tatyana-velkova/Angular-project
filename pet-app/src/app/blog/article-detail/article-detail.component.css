@@ -1,6 +1,6 @@
 .wrapper {
     max-width: 80%;
-    border: 10px solid darkred;
+    border: 10px solid blue;
     border-style: double;
     border-radius: 15px;
     padding: 20px;
@@ -15,8 +15,8 @@ h4 {
 
 .edit-btn,
 .delete-btn {
-    border: 1px solid darkred;
-    color: darkred;
+    border: 1px solid blue;
+    color: blue;
     padding: 7px;
     margin: 10px;
     text-transform: uppercase;

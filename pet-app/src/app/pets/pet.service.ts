@@ -4,7 +4,6 @@ import { Pet } from './pet.model';
 
 export class PetService {
   petChanged = new Subject<Pet[]>();
-
   private pets: Pet[] = [];
 
 

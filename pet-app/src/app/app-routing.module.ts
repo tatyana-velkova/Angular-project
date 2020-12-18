@@ -10,6 +10,10 @@ import { AuthComponent } from './auth/auth.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ArticleEditComponent } from './blog/article-edit/article-edit.component';
 import { ArticleDetailComponent } from './blog/article-detail/article-detail.component';
+import { HotelComponent } from './hotel/hotel.component';
+import { HotelInfoComponent } from './hotel/hotel-info/hotel-info.component';
+import { HotelBookingComponent } from './hotel/hotel-booking/hotel-booking.component';
+import { ArticleResolverService } from './blog/article-resolver.service';
 
 const routes: Routes = [
   {path: '', redirectTo: '/pets', pathMatch: 'full'},
@@ -19,12 +23,15 @@ const routes: Routes = [
     {path: ':id', component: PetDetailComponent},
     {path: ':id/edit', component: PetEditComponent}
   ]},
-  {path: 'blog', component: BlogComponent, children: [
+  {path: 'blog', component: BlogComponent,canActivate: [AuthGuard], resolve: [ArticleResolverService], children: [
     {path: 'new', component: ArticleEditComponent},
     {path: ':id', component: ArticleDetailComponent},
     {path: ':id/edit', component: ArticleEditComponent}
   ]},
-  {path: 'auth', component: AuthComponent}
+  {path: 'auth', component: AuthComponent},
+  {path: 'hotel', component: HotelComponent, children: [
+    {path: 'book', component: HotelBookingComponent }
+  ]}
 ];
 
 @NgModule({

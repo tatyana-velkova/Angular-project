@@ -1,0 +1,41 @@
+.wrapper {
+    font-family: Helvetica, sans-serif;
+    font-style: italic;
+    color: blue;
+    font-weight: bolder;
+    font-size: large;
+    display: flex;
+}
+
+.title {
+    max-width: 20%;
+    min-height: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.picture1 {
+    background: url('../images/lake.png');
+    min-width: 35%;
+    min-height: 480px;
+    padding: 20px 30px;
+    margin: 30px 5px;
+}
+
+.picture2 {
+    background: url('../images/Hotel_3.jpg');
+    min-width: 35%;
+    min-height: 480px;
+    padding: 20px 30px;
+    margin: 30px 5px;
+}
+
+.book {
+    background: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}

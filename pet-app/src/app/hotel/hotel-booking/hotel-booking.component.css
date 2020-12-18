@@ -1,0 +1,60 @@
+.form-wrapper {
+    border: 2px solid darkslategray;
+    padding: 20px;
+    margin: 5px 100px;
+    margin-right: 500px;
+    color: darkslategrey;
+}
+
+.form-wrapper div {
+    margin-bottom: 10px;
+}
+
+.form-wrapper div input {
+    min-width: 70%;
+}
+
+.owner label {
+    margin-right: 20px;
+}
+
+.breed label {
+    margin-right: 63px;
+}
+
+.age label {
+    margin-right: 77px;
+}
+
+.contact label {
+    margin-right: 8px;
+}
+
+.start label {
+    margin-right: 45px;
+}
+
+.end label {
+    margin-right: 48px;
+}
+
+.btn-submit,
+.btn-cancel {
+    border-radius: 7px;
+    padding: 7px;
+    margin: 7px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-submit {
+    border: 2px solid green;
+    background: green;
+    color: white;
+}
+
+.btn-cancel {
+    border: 2px solid red;
+    background: red;
+    color: white;
+}

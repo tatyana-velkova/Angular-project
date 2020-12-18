@@ -1,0 +1,33 @@
+<div class="form-wrapper">
+    <form [formGroup]="bookingForm" (ngSubmit)="submit()">
+
+        <div class="owner">
+            <label for="owner">Owner name:</label>
+            <input type="text" name="owner" id="owner" formControlName="owner">
+        </div>
+        <div class="breed">
+            <label for="breed">Breed:</label>
+            <input type="text" name="breed" id="breed" formControlName="breed">
+        </div>
+        <div class="age">
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" formControlName="age">
+        </div>
+        <div class="contact">
+            <label for="phoneNumber">Owner number:</label>
+            <input type="text" name="phoneNumber" id="phoneNumber" formControlName="phoneNumber">
+        </div>
+        <div class="start">
+            <label for="start">Start date:</label>
+            <input type="date" name="start" id="start" formControlName="start">
+        </div>
+        <div class="end">
+            <label for="end">End date:</label>
+            <input type="date" name="end" id="end" formControlName="end">
+        </div>
+
+        <button class="btn-submit" type="submit" [disabled]="!bookingForm.valid">Submit</button>
+        <button class="btn-cancel" type="button" (click)="cancel()">Cancel</button>
+    </form>
+
+</div>

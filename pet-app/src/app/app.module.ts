@@ -25,6 +25,12 @@ import { ArticleDetailComponent } from './blog/article-detail/article-detail.com
 import { ArticleEditComponent } from './blog/article-edit/article-edit.component';
 import { ArticleService } from './blog/article.service';
 import { ShortenPipe } from './shorten.pipe';
+import { HotelComponent } from './hotel/hotel.component';
+import { HotelInfoComponent } from './hotel/hotel-info/hotel-info.component';
+import { HotelBookingComponent } from './hotel/hotel-booking/hotel-booking.component';
+import { BookingService } from './hotel/booking.service';
+import { ArticleResolverService } from './blog/article-resolver.service';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +48,10 @@ import { ShortenPipe } from './shorten.pipe';
     ArticleItemComponent,
     ArticleDetailComponent,
     ArticleEditComponent,
-    ShortenPipe
+    ShortenPipe,
+    HotelComponent,
+    HotelInfoComponent,
+    HotelBookingComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +61,7 @@ import { ShortenPipe } from './shorten.pipe';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [PetService, DataStorageService, PetResolverService, AuthService, ArticleService],
+  providers: [PetService, DataStorageService, PetResolverService, AuthService, ArticleService, BookingService, ArticleResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
